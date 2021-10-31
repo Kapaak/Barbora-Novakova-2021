@@ -1,9 +1,9 @@
-import React from "react";
+//libs
 import styled from "styled-components";
 
 const Footer = () => {
 	return (
-		<StyledFooter>
+		<StyledFooter name="footer">
 			<div>Barbora Nováková ©2021</div>
 			<div>PZ</div>
 		</StyledFooter>

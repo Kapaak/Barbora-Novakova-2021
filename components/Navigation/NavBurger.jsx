@@ -1,9 +1,9 @@
 //libs
 import styled from "styled-components";
 
-const NavBurger = () => {
+const NavBurger = ({ handleActive }) => {
 	return (
-		<StyledBurger>
+		<StyledBurger onClick={handleActive}>
 			<p></p>
 			<p></p>
 			<p></p>
@@ -13,16 +13,17 @@ const NavBurger = () => {
 
 const StyledBurger = styled.div`
 	display: flex;
-	width: 2rem;
+	width: 4rem;
 	height: 2.9rem;
 	z-index: 999;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
-	width: 100%;
+	margin-left: auto;
+	cursor: pointer;
 
 	p {
-		width: 4rem;
+		width: 100%;
 		height: 0.3rem;
 		background-color: var(--col3);
 	}

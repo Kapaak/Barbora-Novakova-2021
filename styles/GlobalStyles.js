@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
         --font1:"Roboto", sans-serif;
         --font2:"Righteous", cursive;
 
-        --col1:#1a1c1f;
+        --col1:#001427;
         --col2: #F8F8F8;
         --col3:#8D0801;
         --col4:#EBEBEB;
@@ -30,8 +30,6 @@ export const GlobalStyles = createGlobalStyle`
         --bt:1.8rem;
         --h:2.3rem;
 
-
-
     }
 
     html{
@@ -45,4 +43,9 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 1.6rem;
         color: var(--col1);
     }
+
+    a[href^="tel"],a[href^="mail"]{
+		color:inherit;
+		text-decoration:none;
+	}
 `;

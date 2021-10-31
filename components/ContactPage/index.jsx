@@ -4,7 +4,7 @@ import { Headline, Section } from "../../styles";
 
 const ContactPage = () => {
 	return (
-		<Section>
+		<Section scrollName="contact">
 			<Headline>Kontakt</Headline>
 			<Wrapper>
 				<StyledItem>

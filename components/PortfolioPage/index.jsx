@@ -7,7 +7,7 @@ import { Headline, Section } from "../../styles";
 
 const PortfolioPage = () => {
 	return (
-		<Section colored>
+		<Section colored scrollName="portfolio">
 			<Headline>Portfolio</Headline>
 			<Gallery>
 				<img src="/assets/2.jpg" alt="img" />
