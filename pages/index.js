@@ -7,7 +7,7 @@ import ContactPage from "../components/ContactPage";
 import { client } from "../sanity";
 
 export default function Home({ detail, projects }) {
-	const { aboutSection, educationSection, experienceSection } = detail;
+	// const { aboutSection, educationSection, experienceSection } = detail;
 	return (
 		<>
 			<HeroPage />
