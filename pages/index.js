@@ -11,12 +11,12 @@ export default function Home({ detail, projects }) {
 	return (
 		<>
 			<HeroPage />
-			<AboutPage aboutData={aboutSection} />
+			{/* <AboutPage aboutData={aboutSection} />
 			<CVPage
 				educationData={educationSection}
 				experienceData={experienceSection}
 			/>
-			<ProjectPage projectData={projects} />
+			<ProjectPage projectData={projects} /> */}
 			<ContactPage />
 		</>
 	);
