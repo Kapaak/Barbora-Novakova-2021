@@ -35,6 +35,7 @@ const Wrapper = styled.div`
 const StyledItem = styled.div`
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 
 	h3,
 	h4 {
@@ -42,9 +43,11 @@ const StyledItem = styled.div`
 	}
 	h3 {
 		text-transform: uppercase;
+		font-size: var(--bt);
 	}
 	h4 {
 		font-weight: 500;
+		font-size: var(--t);
 	}
 
 	@media ${breakpoints.mobileX} {

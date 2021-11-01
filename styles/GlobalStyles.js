@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
 
         --max-width:120rem;
         --side-p:2rem;
+        --top-p:2rem;
         --gap:1.9rem;
 
         --mh:calc(2.8rem / var(--divider));
@@ -56,6 +57,7 @@ export const GlobalStyles = createGlobalStyle`
         :root{
             --divider:.88;
             --side-p:4rem;
+            --top-p:4rem;
         }
     }
 
@@ -69,12 +71,23 @@ export const GlobalStyles = createGlobalStyle`
         :root{
             --mh: calc(3.6rem / var(--divider));
             --smh: calc(2rem / var(--divider));
-            --t: calc(1.8rem / var(--divider));
+            --t: calc(1.6rem / var(--divider));
             --bt: calc(2.3rem / var(--divider));
-            --h: calc(2.8rem / var(--divider));
+            --h: calc(3.3rem / var(--divider));
 
-            --gap:3rem;
+            --gap:6rem;
             --side-p:14rem;
+            --top-p:10rem;
         }
+    }
+
+    @media ${breakpoints.desktopX}{
+       :root{
+            --mh: calc(5rem / var(--divider));
+            --smh: calc(2.4rem / var(--divider));
+            --h: calc(4rem / var(--divider));
+            --t: calc(1.8rem / var(--divider));
+            --bt: calc(2.5rem / var(--divider));
+       }
     }
 `;

@@ -21,6 +21,7 @@ const StyledBurger = styled.div`
 	align-items: flex-end;
 	margin-left: auto;
 	cursor: pointer;
+	pointer-events: all;
 
 	p {
 		width: 100%;

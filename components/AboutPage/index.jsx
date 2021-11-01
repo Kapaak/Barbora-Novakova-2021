@@ -54,6 +54,18 @@ const Wrapper = styled.div`
 			display: block;
 		}
 	}
+
+	@media ${breakpoints.desktopS} {
+		img {
+			height: 38rem;
+		}
+	}
+
+	@media ${breakpoints.desktopX} {
+		img {
+			height: 44rem;
+		}
+	}
 `;
 
 export default AboutPage;

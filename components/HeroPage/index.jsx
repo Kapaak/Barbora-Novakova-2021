@@ -7,24 +7,32 @@ import { Line } from "../../styles";
 const HeroPage = () => {
 	return (
 		<StyledHeroPage>
-			<Wrapper>
-				<img src="assets/house.svg" alt="house" />
-				<div>
-					<HeroHeadline>Barbora Nováková</HeroHeadline>
-					<Line />
-					<HeroSubheadline>Architecture student</HeroSubheadline>
-				</div>
-			</Wrapper>
+			<div>
+				<Wrapper>
+					<img src="assets/house.svg" alt="house" />
+					<div>
+						<HeroHeadline>Barbora Nováková</HeroHeadline>
+						<Line />
+						<HeroSubheadline>Architecture student</HeroSubheadline>
+					</div>
+				</Wrapper>
+			</div>
 		</StyledHeroPage>
 	);
 };
 
-const StyledHeroPage = styled.div`
+const StyledHeroPage = styled.section`
 	position: relative;
 	min-height: 100vh;
 	padding: var(--side-p);
 	display: flex;
 	align-items: flex-end;
+
+	& > div {
+		max-width: var(--max-width);
+		margin: 0 auto;
+		width: 100%;
+	}
 `;
 
 const Wrapper = styled.div`
@@ -56,6 +64,12 @@ const Wrapper = styled.div`
 	@media ${breakpoints.desktopS} {
 		img {
 			height: 9.8rem;
+		}
+	}
+
+	@media ${breakpoints.desktopX} {
+		img {
+			height: 12.6rem;
 		}
 	}
 `;

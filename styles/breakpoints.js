@@ -5,4 +5,5 @@ export const breakpoints = {
 	mobileX: media(564),
 	tabletS: media(766),
 	desktopS: media(1024),
+	desktopX: media(1500),
 };

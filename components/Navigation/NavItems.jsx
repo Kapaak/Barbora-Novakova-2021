@@ -2,12 +2,16 @@
 import styled from "styled-components";
 import { scroller } from "react-scroll";
 
-const NavItems = () => {
+const NavItems = ({ handleActive }) => {
+	const handleClick = direction => {
+		handleActive();
+		scroller.scrollTo(direction);
+	};
 	return (
 		<StyledNavItems>
-			<p onClick={() => scroller.scrollTo("about")}>O mně</p>
-			<p onClick={() => scroller.scrollTo("portfolio")}>Portfolio</p>
-			<p onClick={() => scroller.scrollTo("contact")}>Kontakt</p>
+			<p onClick={() => handleClick("about")}>O mně</p>
+			<p onClick={() => handleClick("portfolio")}>Portfolio</p>
+			<p onClick={() => handleClick("contact")}>Kontakt</p>
 		</StyledNavItems>
 	);
 };
@@ -20,6 +24,11 @@ const StyledNavItems = styled.div`
 	gap: var(--gap);
 	font-weight: bold;
 	color: var(--col2);
+
+	p {
+		cursor: pointer;
+		font-size: var(--bt);
+	}
 `;
 
 export default NavItems;

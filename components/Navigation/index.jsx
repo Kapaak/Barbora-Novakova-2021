@@ -10,13 +10,12 @@ const Navigation = () => {
 
 	const handleActive = () => {
 		setActive(prev => !prev);
-		console.log("active");
 	};
 
 	return (
-		<StyledNavigation>
+		<StyledNavigation active={active}>
 			<NavBurger handleActive={handleActive} />
-			{active && <NavItems />}
+			{active && <NavItems handleActive={handleActive} />}
 			<Filler active={active} />
 		</StyledNavigation>
 	);
@@ -46,6 +45,7 @@ const StyledNavigation = styled.div`
 	height: 100vh;
 	overflow: hidden;
 	z-index: 990;
+	pointer-events: ${({ active }) => (active ? "all" : "none")};
 `;
 
 export default Navigation;
