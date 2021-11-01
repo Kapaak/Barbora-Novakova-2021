@@ -22,7 +22,12 @@ const AboutPage = ({ aboutData }) => {
 						šiji a také sportuji.
 					</Text>
 					<Button>
-						<a download target="_blank" href={aboutData.file.url}>
+						<a
+							download
+							rel="noreferrer"
+							target="_blank"
+							href={aboutData.file.url}
+						>
 							životopis
 						</a>
 					</Button>
