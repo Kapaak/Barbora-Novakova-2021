@@ -10,7 +10,7 @@ const NavItems = ({ handleActive }) => {
 	return (
 		<StyledNavItems>
 			<p onClick={() => handleClick("about")}>O mně</p>
-			<p onClick={() => handleClick("portfolio")}>Portfolio</p>
+			<p onClick={() => handleClick("projects")}>Portfolio</p>
 			<p onClick={() => handleClick("contact")}>Kontakt</p>
 		</StyledNavItems>
 	);

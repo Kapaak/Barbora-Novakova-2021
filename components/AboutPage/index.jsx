@@ -2,13 +2,16 @@
 import styled from "styled-components";
 //components
 import { breakpoints, Button, Headline, Section, Text } from "../../styles";
+import { urlFor } from "../../utils/imageBuilder";
 
-const AboutPage = () => {
+const AboutPage = ({ aboutData }) => {
+	console.log(aboutData);
 	return (
 		<Section colored scrollName="about">
 			<Headline>O mně</Headline>
 			<Wrapper>
-				<img src="/assets/bara.jpg" alt="my-profile-img" />
+				{/* <img src="/assets/bara.jpg" alt="my-profile-img" /> */}
+				<img src={urlFor(aboutData.photo)?.url()} alt="my profile image" />
 				<TextWrapper>
 					<Text>
 						Jsem studentkou FA v Brně. Pocházím z Brna a také zde žiji. Zajímám
@@ -21,7 +24,7 @@ const AboutPage = () => {
 						šiji a také sportuji.
 					</Text>
 					<Button>
-						<a href="/assets/CV_BN.pdf" download>
+						<a download target="_blank" href={aboutData.file.url}>
 							životopis
 						</a>
 					</Button>

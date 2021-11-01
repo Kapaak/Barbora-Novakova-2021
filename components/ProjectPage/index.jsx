@@ -5,9 +5,9 @@ import "react-bnb-gallery/dist/style.css";
 //components
 import { Headline, Section } from "../../styles";
 
-const PortfolioPage = () => {
+const ProjectPage = () => {
 	return (
-		<Section colored scrollName="portfolio">
+		<Section colored scrollName="projects">
 			<Headline>Portfolio</Headline>
 			<Gallery>
 				<img src="/assets/2.jpg" alt="img" />
@@ -26,4 +26,4 @@ const Gallery = styled.div`
 	}
 `;
 
-export default PortfolioPage;
+export default ProjectPage;

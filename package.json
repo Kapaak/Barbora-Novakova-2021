@@ -6,9 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "push": "git add . && git commit -m 'fast && git push' && git push "
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/types": "^2.13.1",
     "next": "12.0.1",
     "react": "17.0.2",
     "react-bnb-gallery": "^1.4.4",
@@ -18,6 +21,8 @@
   },
   "devDependencies": {
     "eslint": "7",
-    "eslint-config-next": "12.0.1"
+    "eslint-config-next": "12.0.1",
+    "@sanity/client": "^2.21.7",
+    "@sanity/image-url": "^1.0.1"
   }
 }
