@@ -4,41 +4,35 @@ import styled from "styled-components";
 import { breakpoints, Headline, Section } from "../../styles";
 
 const CVPage = ({ educationData, experienceData }) => {
+	console.log(experienceData, "expData");
 	return (
 		<Section>
 			<MarginWrapper>
 				<Headline>Vzdělání</Headline>
 				<Wrapper firstChild={true}>
-					<StyledItem>
-						<h3>Gymnázium Brno</h3>
-						<h3>Křenová 36</h3>
-						<h4>2013 - 2014</h4>
-					</StyledItem>
-					<StyledItem>
-						<h3>FA VUT v Brně</h3>
-						<h3>bakalářské studium</h3>
-						<h4>2013 - 2014</h4>
-					</StyledItem>
-					<StyledItem>
-						<h3>FA VUT v Brně</h3>
-						<h3>magisterské studium</h3>
-						<h4>2013 - 2014</h4>
-					</StyledItem>
+					{educationData?.map((e, i) => {
+						return (
+							<StyledItem key={i}>
+								<h3>{e.study}</h3>
+								<h3>{e.location}</h3>
+								<h4>{e.date}</h4>
+							</StyledItem>
+						);
+					})}
 				</Wrapper>
 			</MarginWrapper>
 			<div>
 				<Headline>Zkušenosti</Headline>
 				<Wrapper>
-					<StyledItem>
-						<h3>Gymnázium Brno</h3>
-						<h3>Křenová 36</h3>
-						<h4>2013 - 2014</h4>
-					</StyledItem>
-					<StyledItem>
-						<h3>FA VUT v Brně</h3>
-						<h3>bakalářské studium</h3>
-						<h4>2013 - 2014</h4>
-					</StyledItem>
+					{experienceData?.map((e, i) => {
+						return (
+							<StyledItem key={i}>
+								<h3>{e.job}</h3>
+								<h3>{e.company}</h3>
+								<h4>{e.date}</h4>
+							</StyledItem>
+						);
+					})}
 				</Wrapper>
 			</div>
 		</Section>
