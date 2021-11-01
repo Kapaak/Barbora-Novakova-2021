@@ -10,7 +10,6 @@ const AboutPage = ({ aboutData }) => {
 		<Section colored scrollName="about">
 			<Headline>O mně</Headline>
 			<Wrapper>
-				{/* <img src="/assets/bara.jpg" alt="my-profile-img" /> */}
 				<img src={urlFor(aboutData.photo)?.url()} alt="my profile image" />
 				<TextWrapper>
 					<Text>

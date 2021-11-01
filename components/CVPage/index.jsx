@@ -3,7 +3,7 @@ import styled from "styled-components";
 //components
 import { breakpoints, Headline, Section } from "../../styles";
 
-const CVPage = () => {
+const CVPage = ({ educationData, experienceData }) => {
 	return (
 		<Section>
 			<MarginWrapper>
