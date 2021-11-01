@@ -1,5 +1,6 @@
 //libraries
 import { createGlobalStyle } from "styled-components";
+import { breakpoints } from ".";
 //breakpoints
 // import { breakpoints } from "./breakpoints";
 
@@ -20,15 +21,17 @@ export const GlobalStyles = createGlobalStyle`
         --col4:#EBEBEB;
         --col5:#D6D6D6;
 
-        --max-width:140rem;
+        --max-width:120rem;
         --side-p:2rem;
         --gap:1.9rem;
 
-        --mh:2.8rem;
-        --smh:1.8rem;
-        --t:1.6rem;
-        --bt:1.8rem;
-        --h:2.3rem;
+        --mh:calc(2.8rem / var(--divider));
+        --smh:calc(1.8rem / var(--divider));
+        --t:calc(1.6rem / var(--divider));
+        --bt:calc(1.8rem / var(--divider));
+        --h:calc(2.3rem / var(--divider));
+
+        --divider:1;
 
     }
 
@@ -48,4 +51,30 @@ export const GlobalStyles = createGlobalStyle`
 		color:inherit;
 		text-decoration:none;
 	}
+
+    @media ${breakpoints.mobileM}{
+        :root{
+            --divider:.88;
+            --side-p:4rem;
+        }
+    }
+
+    @media ${breakpoints.tabletS}{
+        :root{
+            --side-p:8rem;
+        }
+    }
+
+    @media ${breakpoints.desktopS}{
+        :root{
+            --mh: calc(3.6rem / var(--divider));
+            --smh: calc(2rem / var(--divider));
+            --t: calc(1.8rem / var(--divider));
+            --bt: calc(2.3rem / var(--divider));
+            --h: calc(2.8rem / var(--divider));
+
+            --gap:3rem;
+            --side-p:14rem;
+        }
+    }
 `;

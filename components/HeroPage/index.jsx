@@ -1,6 +1,6 @@
 //lib
 import styled from "styled-components";
-import { HeroHeadline } from "../../styles";
+import { breakpoints, HeroHeadline } from "../../styles";
 import { HeroSubheadline } from "../../styles";
 import { Line } from "../../styles";
 
@@ -35,6 +35,28 @@ const Wrapper = styled.div`
 
 	img {
 		height: 7.845rem;
+	}
+
+	& > div {
+		width: 100%;
+	}
+
+	@media ${breakpoints.mobileM} {
+		img {
+			height: 8.6rem;
+		}
+	}
+
+	@media ${breakpoints.mobileX} {
+		& > div {
+			margin-top: 3.9rem;
+		}
+	}
+
+	@media ${breakpoints.desktopS} {
+		img {
+			height: 9.8rem;
+		}
 	}
 `;
 

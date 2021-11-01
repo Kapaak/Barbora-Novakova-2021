@@ -1,7 +1,7 @@
 //libs
 import styled from "styled-components";
 //components
-import { Button, Headline, Section, Text } from "../../styles";
+import { breakpoints, Button, Headline, Section, Text } from "../../styles";
 
 const AboutPage = () => {
 	return (
@@ -9,7 +9,7 @@ const AboutPage = () => {
 			<Headline>O mně</Headline>
 			<Wrapper>
 				<img src="/assets/bara.jpg" alt="my-profile-img" />
-				<div>
+				<TextWrapper>
 					<Text>
 						Jsem studentkou FA v Brně. Pocházím z Brna a také zde žiji. Zajímám
 						se o design a současné trendy v architektuře. Baví mě hlavně
@@ -25,16 +25,34 @@ const AboutPage = () => {
 							životopis
 						</a>
 					</Button>
-				</div>
+				</TextWrapper>
 			</Wrapper>
 		</Section>
 	);
 };
 
+const TextWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: var(--gap);
+`;
+
 const Wrapper = styled.div`
 	display: flex;
+	gap: var(--gap);
+
 	img {
 		display: none;
+		width: 100%;
+		height: 30rem;
+	}
+
+	@media ${breakpoints.mobileX} {
+		img {
+			display: block;
+		}
 	}
 `;
 

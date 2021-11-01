@@ -1,14 +1,14 @@
 //libs
 import styled from "styled-components";
 //components
-import { Headline, Section } from "../../styles";
+import { breakpoints, Headline, Section } from "../../styles";
 
 const CVPage = () => {
 	return (
 		<Section>
 			<div>
 				<Headline>Vzdělání</Headline>
-				<Wrapper>
+				<Wrapper firstChild={true}>
 					<StyledItem>
 						<h3>Gymnázium Brno</h3>
 						<h3>Křenová 36</h3>
@@ -59,6 +59,10 @@ const StyledItem = styled.div`
 		letter-spacing: 0.2rem;
 		font-weight: 500;
 		font-size: var(--bt);
+	}
+
+	@media ${breakpoints.tabletS} {
+		flex: 0 1 30%;
 	}
 `;
 

@@ -1,4 +1,4 @@
-// export { breakpoints } from "./breakpoints";
+export { breakpoints } from "./breakpoints";
 export { GlobalStyles } from "./GlobalStyles";
 export { HeroHeadline } from "./themes";
 export { HeroSubheadline } from "./themes";
