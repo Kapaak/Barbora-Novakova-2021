@@ -9,7 +9,7 @@ const AboutPage = ({ aboutData }) => {
 		<Section colored scrollName="about">
 			<Headline>O mně</Headline>
 			<Wrapper>
-				{/* <img src={urlFor(aboutData?.photo).url()} alt="my profile image" /> */}
+				<img src={urlFor(aboutData?.photo).url()} alt="my profile image" />
 				<TextWrapper>
 					<Text>
 						Jsem studentkou FA v Brně. Pocházím z Brna a také zde žiji. Zajímám
@@ -21,11 +21,11 @@ const AboutPage = ({ aboutData }) => {
 						prostranství. Ve svém volném čase ráda cestuji, chodím do přírody,
 						šiji a také sportuji.
 					</Text>
-					{/* <Button>
+					<Button>
 						<a download target="_blank" href={aboutData.file.url}>
 							životopis
 						</a>
-					</Button> */}
+					</Button>
 				</TextWrapper>
 			</Wrapper>
 		</Section>
