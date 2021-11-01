@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { breakpoints, Headline, Section } from "../../styles";
 
 const CVPage = ({ educationData, experienceData }) => {
-	console.log(experienceData, "expData");
 	return (
 		<Section>
 			<MarginWrapper>
