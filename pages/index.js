@@ -7,16 +7,16 @@ import ContactPage from "../components/ContactPage";
 import { client } from "../sanity";
 
 export default function Home({ detail, projects }) {
-	const { aboutSection, educationSection, experienceSection } = detail;
+	// const { aboutSection, educationSection, experienceSection } = detail;
 	return (
 		<>
 			<HeroPage />
-			<AboutPage aboutData={aboutSection} />
+			{/* <AboutPage aboutData={aboutSection} />
 			<CVPage
 				educationData={educationSection}
 				experienceData={experienceSection}
 			/>
-			<ProjectPage projectData={projects} />
+			<ProjectPage projectData={projects} /> */}
 			<ContactPage />
 		</>
 	);
