@@ -1,7 +1,5 @@
 //libs
 import styled from "styled-components";
-import ReactBnbGallery from "react-bnb-gallery";
-import "react-bnb-gallery/dist/style.css";
 //components
 import { Headline, Section } from "../../styles";
 
