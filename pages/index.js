@@ -1,17 +1,17 @@
 //pages
-import HeroPage from "../components/HeroPage";
-import AboutPage from "../components/AboutPage";
-import CVPage from "../components/CVPage";
-import ProjectPage from "../components/ProjectPage";
+// import HeroPage from "../components/HeroPage";
+// import AboutPage from "../components/AboutPage";
+// import CVPage from "../components/CVPage";
+// import ProjectPage from "../components/ProjectPage";
 import ContactPage from "../components/ContactPage";
-import { client } from "../sanity";
+// import { client } from "../sanity";
 
 // export default function Home({ detail, projects }) {
 export default function Home() {
 	// const { aboutSection, educationSection, experienceSection } = detail;
 	return (
 		<>
-			<HeroPage />
+			{/* <HeroPage /> */}
 			{/* <AboutPage aboutData={aboutSection} />
 			<CVPage
 				educationData={educationSection}
