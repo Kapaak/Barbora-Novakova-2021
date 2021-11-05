@@ -7,3 +7,4 @@ export { Section } from "./themes";
 export { Headline } from "./themes";
 export { Text } from "./themes";
 export { Button } from "./themes";
+export { FillerEffect } from "./themes";

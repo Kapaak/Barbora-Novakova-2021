@@ -12,6 +12,7 @@ const NavBurger = ({ handleActive }) => {
 };
 
 const StyledBurger = styled.div`
+	position: relative;
 	display: flex;
 	width: 4rem;
 	height: 2.9rem;

@@ -17,6 +17,7 @@ const NavItems = ({ handleActive }) => {
 };
 
 const StyledNavItems = styled.div`
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin-top: 6rem;
@@ -24,6 +25,7 @@ const StyledNavItems = styled.div`
 	gap: var(--gap);
 	font-weight: bold;
 	color: var(--col2);
+	z-index: 999;
 
 	p {
 		cursor: pointer;

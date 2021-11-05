@@ -1,11 +1,11 @@
 //libs
 import styled from "styled-components";
+import Image from "next/image";
 //components
-import { Headline, Section } from "../../styles";
+import { FillerEffect, Headline, Section } from "../../styles";
 import { urlFor } from "../../utils/imageBuilder";
 
 const ProjectPage = ({ projectData }) => {
-	console.log(projectData, "data");
 	return (
 		<Section colored scrollName="projects">
 			<Headline>Portfolio</Headline>
@@ -13,7 +13,11 @@ const ProjectPage = ({ projectData }) => {
 				{projectData?.map((p, i) => {
 					return (
 						<GalleryItem key={i}>
-							<img src={urlFor(p?.image[0]).url()} />
+							<FillerEffect />
+							{p.image[0] && (
+								<Image src={urlFor(p.image[0]).url()} layout="fill" />
+							)}
+							{/* {p.image[0] && <img src={urlFor(p.image[0]).url()} />} */}
 							<ImageDescription>
 								<h2>{p.headline}</h2>
 								<h1>{p.subheadline}</h1>
@@ -27,6 +31,8 @@ const ProjectPage = ({ projectData }) => {
 };
 
 const ImageDescription = styled.div`
+	opacity: 0;
+	z-index: 3;
 	h2 {
 		font-weight: 500;
 		color: var(--col4);
@@ -46,12 +52,13 @@ const GalleryItem = styled.div`
 	cursor: pointer;
 	overflow: hidden;
 	height: 35rem;
+	width: 35rem;
 
-	img {
+	/* img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-	}
+	} */
 
 	& > div {
 		position: absolute;
@@ -60,7 +67,16 @@ const GalleryItem = styled.div`
 		color: var(--col2);
 	}
 
-	&::before {
+	&:hover ${FillerEffect} {
+		transform: scale(30);
+		opacity: 0.9;
+	}
+
+	&:hover ${ImageDescription} {
+		opacity: 1;
+	}
+
+	/* &::before {
 		content: "";
 		position: absolute;
 		opacity: 0;
@@ -79,7 +95,7 @@ const GalleryItem = styled.div`
 			display: block;
 			transform: scale(40);
 		}
-	}
+	} */
 `;
 
 const Gallery = styled.div`

@@ -1,29 +1,33 @@
 //lib
 import styled from "styled-components";
+import Div100vh from "react-div-100vh";
+//comps
 import { breakpoints, HeroHeadline } from "../../styles";
 import { HeroSubheadline } from "../../styles";
 import { Line } from "../../styles";
 
 const HeroPage = () => {
 	return (
-		<StyledHeroPage>
-			<div>
-				<Wrapper>
-					<img src="assets/house.svg" alt="house" />
-					<div>
-						<HeroHeadline>Barbora Nováková</HeroHeadline>
-						<Line />
-						<HeroSubheadline>Architecture student</HeroSubheadline>
-					</div>
-				</Wrapper>
-			</div>
-		</StyledHeroPage>
+		<Div100vh>
+			<StyledHeroPage>
+				<div>
+					<Wrapper>
+						<img src="assets/house.svg" alt="house" />
+						<div>
+							<HeroHeadline>Barbora Nováková</HeroHeadline>
+							<Line />
+							<HeroSubheadline>Architecture student</HeroSubheadline>
+						</div>
+					</Wrapper>
+				</div>
+			</StyledHeroPage>
+		</Div100vh>
 	);
 };
 
 const StyledHeroPage = styled.section`
 	position: relative;
-	min-height: 100vh;
+	min-height: 100%;
 	padding: var(--side-p);
 	display: flex;
 	align-items: flex-end;

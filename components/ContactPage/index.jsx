@@ -35,7 +35,6 @@ const Wrapper = styled.div`
 const StyledItem = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 
 	h3,
 	h4 {
@@ -54,6 +53,7 @@ const StyledItem = styled.div`
 		flex-direction: row;
 		width: 40rem;
 		justify-content: space-between;
+		align-items: center;
 
 		h4 {
 			width: 22rem;
