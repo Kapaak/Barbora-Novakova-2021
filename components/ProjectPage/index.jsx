@@ -1,18 +1,47 @@
 //libs
 import styled from "styled-components";
 import Image from "next/image";
+import ReactBnbGallery from "react-bnb-gallery";
+import "react-bnb-gallery/dist/style.css";
 //components
 import { FillerEffect, Headline, Section } from "../../styles";
 import { urlFor } from "../../utils/imageBuilder";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const ProjectPage = ({ projectData }) => {
+	const [active, setActive] = useState(false);
+	const [gallery, setGallery] = useState([]);
+	const [targetedImage, setTargetedImage] = useState(0);
+
+	const targetActiveImage = index => {
+		setTargetedImage(index);
+		setActive(true);
+	};
+
+	useEffect(() => {
+		projectData.map((p, i) => {
+			const photoArray = [];
+			p.image?.map(image => {
+				photoArray.push(urlFor(image).url());
+			});
+
+			setGallery(prev => [
+				...prev,
+				{ projectName: p.subheadline, imageURLs: photoArray },
+			]);
+		});
+	}, []);
+
+	console.log(gallery);
+
 	return (
 		<Section colored scrollName="projects">
 			<Headline>Portfolio</Headline>
 			<Gallery>
 				{projectData?.map((p, i) => {
 					return (
-						<GalleryItem key={i}>
+						<GalleryItem key={i} onClick={() => targetActiveImage(i)}>
 							<FillerEffect />
 							{p.image[0] && (
 								<Image src={urlFor(p.image[0]).url()} layout="fill" />
@@ -26,6 +55,14 @@ const ProjectPage = ({ projectData }) => {
 					);
 				})}
 			</Gallery>
+			{active && (
+				<ReactBnbGallery
+					photos={gallery[targetedImage].imageURLs}
+					show={active}
+					onClose={() => setActive(false)}
+					showThumbnails={false}
+				/>
+			)}
 		</Section>
 	);
 };
