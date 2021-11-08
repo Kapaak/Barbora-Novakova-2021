@@ -26,7 +26,7 @@ const StyledButton = styled.button`
 		display: inline-block;
 		color: var(--col1);
 		text-decoration: none;
-		padding: 0.5rem 1rem;
+		padding: 0.8rem 1.4rem;
 		font-weight: 500;
 		z-index: 2;
 	}

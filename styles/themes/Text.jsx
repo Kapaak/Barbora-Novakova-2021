@@ -9,6 +9,7 @@ export const Text = ({ children }) => {
 const StyledText = styled.div`
 	font-size: var(--t);
 	letter-spacing: 0.1rem;
+	line-height: 1.8;
 
 	@media ${breakpoints.desktopS} {
 		line-height: 1.6;

@@ -81,8 +81,13 @@ const StyledItem = styled.div`
 
 const Wrapper = styled.div`
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: column;
 	gap: var(--gap);
+
+	@media ${breakpoints.mobileX} {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 `;
 
 export default CVPage;

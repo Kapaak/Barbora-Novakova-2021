@@ -29,7 +29,9 @@ const StyledNavItems = styled.div`
 
 	p {
 		cursor: pointer;
-		font-size: var(--bt);
+		font-size: var(--mh);
+		font-weight: 500;
+		text-align: left;
 	}
 `;
 

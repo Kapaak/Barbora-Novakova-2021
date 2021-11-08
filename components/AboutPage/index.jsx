@@ -55,7 +55,7 @@ const Wrapper = styled.div`
 		height: 30rem;
 	}
 
-	@media ${breakpoints.mobileX} {
+	@media ${breakpoints.tabletS} {
 		img {
 			display: block;
 		}
