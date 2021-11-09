@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
 
         --max-width:120rem;
         --side-p:2rem;
-        --top-p:2rem;
+        --top-p:4rem;
         --gap:1.9rem;
 
         --mh:calc(2.8rem / var(--divider));
@@ -56,7 +56,6 @@ export const GlobalStyles = createGlobalStyle`
         :root{
             --divider:.88;
             --side-p:4rem;
-            --top-p:4rem;
         }
     }
 
