@@ -16,7 +16,7 @@ const HeroPage = () => {
 						<div>
 							<HeroHeadline>Barbora Nováková</HeroHeadline>
 							<Line />
-							<HeroSubheadline>Architecture student</HeroSubheadline>
+							<HeroSubheadline>Studentka architektury</HeroSubheadline>
 						</div>
 					</Wrapper>
 				</div>
@@ -62,7 +62,7 @@ const Wrapper = styled.div`
 		}
 	}
 
-	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 564px) {
 		img {
 			height: 9.665rem;
 		}
