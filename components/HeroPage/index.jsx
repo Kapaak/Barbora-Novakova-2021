@@ -47,6 +47,7 @@ const Wrapper = styled.div`
 
 	img {
 		height: 7.845rem;
+		flex: 1;
 	}
 
 	& > div {
