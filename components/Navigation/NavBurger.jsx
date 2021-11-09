@@ -1,5 +1,6 @@
 //libs
 import styled from "styled-components";
+import { breakpoints } from "../../styles";
 
 const NavBurger = ({ handleActive }) => {
 	return (
@@ -28,6 +29,10 @@ const StyledBurger = styled.div`
 		width: 100%;
 		height: 0.3rem;
 		background-color: var(--col3);
+	}
+
+	@media ${breakpoints.desktopS} {
+		display: none;
 	}
 `;
 
