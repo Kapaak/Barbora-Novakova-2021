@@ -62,7 +62,7 @@ const Wrapper = styled.div`
 		}
 	}
 
-	@media (-webkit-min-device-pixel-ratio: 4) {
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
 		img {
 			height: 9.665rem;
 		}
