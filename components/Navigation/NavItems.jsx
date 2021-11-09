@@ -5,7 +5,7 @@ import { scroller } from "react-scroll";
 const NavItems = ({ handleActive }) => {
 	const handleClick = direction => {
 		handleActive();
-		scroller.scrollTo(direction, { smooth: true });
+		scroller.scrollTo(direction, { smooth: true, offset: -40 });
 	};
 	return (
 		<StyledNavItems>
