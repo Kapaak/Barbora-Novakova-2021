@@ -46,13 +46,17 @@ const Wrapper = styled.div`
 	align-items: flex-start;
 
 	img {
-		height: 9.665rem;
-		/* height: 7.845rem; */
+		height: 7.845rem;
+		/* height: 9.665rem; */
 		flex: 1;
 	}
 
 	& > div {
 		width: 100%;
+	}
+
+	@media (-webkit-min-device-pixel-ratio: 4) {
+		height: 9.665rem;
 	}
 
 	@media ${breakpoints.mobileM} {
