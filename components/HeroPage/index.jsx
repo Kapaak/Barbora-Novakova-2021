@@ -55,16 +55,16 @@ const Wrapper = styled.div`
 		width: 100%;
 	}
 
-	@media (-webkit-min-device-pixel-ratio: 4) {
-		img {
-			height: 9.665rem;
-		}
-	}
-
 	@media ${breakpoints.mobileM} {
 		img {
 			height: 8.6rem;
 			width: 100%;
+		}
+	}
+
+	@media (-webkit-min-device-pixel-ratio: 4) {
+		img {
+			height: 9.665rem;
 		}
 	}
 
