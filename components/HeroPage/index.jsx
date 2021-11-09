@@ -57,6 +57,7 @@ const Wrapper = styled.div`
 	@media ${breakpoints.mobileM} {
 		img {
 			height: 8.6rem;
+			width: 100%;
 		}
 	}
 

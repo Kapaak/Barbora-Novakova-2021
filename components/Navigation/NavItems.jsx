@@ -23,15 +23,14 @@ const StyledNavItems = styled.div`
 	margin-top: 6rem;
 	text-align: right;
 	gap: var(--gap);
-	font-weight: bold;
 	color: var(--col2);
 	z-index: 999;
 
 	p {
 		cursor: pointer;
 		font-size: var(--mh);
-		font-weight: 500;
 		text-align: left;
+		font-family: var(--font2);
 	}
 `;
 
