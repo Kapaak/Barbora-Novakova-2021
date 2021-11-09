@@ -47,6 +47,11 @@ export const GlobalStyles = createGlobalStyle`
         color: var(--col1);
     }
 
+    //removing border-radius from gallery image
+    .media-image{
+        border-radius: 0 !important;
+    }
+
     a[href^="tel"],a[href^="mail"]{
 		color:inherit;
 		text-decoration:none;

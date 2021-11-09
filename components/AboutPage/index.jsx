@@ -1,5 +1,6 @@
 //libs
 import styled from "styled-components";
+import BlockContent from "@sanity/block-content-to-react";
 //components
 import { breakpoints, Button, Headline, Section, Text } from "../../styles";
 import { urlFor } from "../../utils/imageBuilder";
@@ -12,14 +13,7 @@ const AboutPage = ({ aboutData }) => {
 				<img src={urlFor(aboutData?.photo).url()} alt="my profile image" />
 				<TextWrapper>
 					<Text>
-						Jsem studentkou FA v Brně. Pocházím z Brna a také zde žiji. Zajímám
-						se o design a současné trendy v architektuře. Baví mě hlavně
-						urbanismus a veřejné prostranství. Ve svém volném čase ráda cestuji,
-						chodím do přírody, šiji a také sportuji. Baví mě hlavně urbanismus a
-						veřejné prostranství. Ve svém volném čase ráda cestuji, chodím do
-						přírody, šiji a také sportuji. Baví mě hlavně urbanismus a veřejné
-						prostranství. Ve svém volném čase ráda cestuji, chodím do přírody,
-						šiji a také sportuji.
+						<BlockContent blocks={aboutData.text} />
 					</Text>
 					<Button>
 						<a

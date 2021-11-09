@@ -46,7 +46,6 @@ const ProjectPage = ({ projectData }) => {
 							{p.image[0] && (
 								<Image src={urlFor(p.image[0]).url()} layout="fill" />
 							)}
-							{/* {p.image[0] && <img src={urlFor(p.image[0]).url()} />} */}
 							<ImageDescription>
 								<h2>{p.headline}</h2>
 								<h1>{p.subheadline}</h1>
@@ -91,12 +90,6 @@ const GalleryItem = styled.div`
 	height: 35rem;
 	width: 35rem;
 
-	/* img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	} */
-
 	& > div {
 		position: absolute;
 		left: 5%;
@@ -112,27 +105,6 @@ const GalleryItem = styled.div`
 	&:hover ${ImageDescription} {
 		opacity: 1;
 	}
-
-	/* &::before {
-		content: "";
-		position: absolute;
-		opacity: 0;
-		top: 0;
-		left: 0;
-		width: 4rem;
-		height: 4rem;
-		border-radius: 50%;
-		background-color: #1f1f1fb7;
-		transition: transform 0.5s ease-in-out;
-	}
-
-	&:hover {
-		&::before {
-			opacity: 1;
-			display: block;
-			transform: scale(40);
-		}
-	} */
 `;
 
 const Gallery = styled.div`
