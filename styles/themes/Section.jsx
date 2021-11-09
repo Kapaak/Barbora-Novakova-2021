@@ -1,9 +1,8 @@
 //libs
 import styled from "styled-components";
-import Scroll from "react-scroll";
+import { Element as ScrollElement } from "react-scroll";
 
 export const Section = ({ colored, children, scrollName }) => {
-	const ScrollElement = Scroll.Element;
 	return (
 		<StyledSection colored={colored}>
 			<div>
