@@ -13,6 +13,7 @@ const SHeroHeadline = styled.h1`
 	font-weight: 500;
 	font-size: var(--mh);
 	margin-left: 1rem;
+	line-height: 1.25;
 
 	@media ${breakpoints.desktopS} {
 		margin-left: 2.5rem;
