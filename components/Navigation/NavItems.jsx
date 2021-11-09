@@ -37,6 +37,7 @@ const StyledNavItems = styled.div`
 	@media ${breakpoints.desktopS} {
 		display: flex;
 		margin-top: 0;
+		gap: 3rem;
 
 		p {
 			position: relative;
