@@ -46,7 +46,8 @@ const Wrapper = styled.div`
 	align-items: flex-start;
 
 	img {
-		height: 7.845rem;
+		height: 8.845rem;
+		/* height: 7.845rem; */
 		flex: 1;
 	}
 
