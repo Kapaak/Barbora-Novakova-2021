@@ -1,21 +1,39 @@
 //lib
 import styled from "styled-components";
 import Div100vh from "react-div-100vh";
+import { useRef, useEffect, useState } from "react";
 //comps
 import { breakpoints, HeroHeadline } from "../../styles";
 import { HeroSubheadline } from "../../styles";
 import { Line } from "../../styles";
 
 const HeroPage = () => {
+	const wrapperRef = useRef(null);
+	const fullSizeRef = useRef(null);
+	const [correctWidth, setCorrectWidth] = useState(0);
+
+	const responsiveLineResize = () => {
+		const wrapperWidth = wrapperRef.current.getBoundingClientRect().right;
+		const fullSizeWidth = fullSizeRef.current.getBoundingClientRect().right;
+		const result = fullSizeWidth - wrapperWidth;
+		setCorrectWidth(result);
+	};
+
+	useEffect(() => {
+		responsiveLineResize();
+
+		window.addEventListener("resize", () => responsiveLineResize());
+	}, []);
+
 	return (
-		<Div100vh>
+		<Div100vh ref={fullSizeRef}>
 			<StyledHeroPage>
 				<div>
-					<Wrapper>
+					<Wrapper ref={wrapperRef}>
 						<img src="assets/house.svg" alt="house" />
 						<div>
 							<HeroHeadline>Barbora Nováková</HeroHeadline>
-							<Line />
+							<Line correctWidth={correctWidth} />
 							<HeroSubheadline>Studentka architektury</HeroSubheadline>
 						</div>
 					</Wrapper>

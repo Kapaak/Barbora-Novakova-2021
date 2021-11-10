@@ -113,6 +113,7 @@ const Gallery = styled.div`
 	gap: var(--gap);
 	img {
 		width: 100%;
+		object-fit: cover;
 	}
 `;
 
