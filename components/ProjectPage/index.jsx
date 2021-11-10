@@ -33,8 +33,6 @@ const ProjectPage = ({ projectData }) => {
 		});
 	}, []);
 
-	console.log(gallery);
-
 	return (
 		<Section colored scrollName="projects">
 			<Headline>Portfolio</Headline>
