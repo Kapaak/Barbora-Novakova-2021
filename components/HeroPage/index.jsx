@@ -48,7 +48,7 @@ const HeroPage = () => {
 									strokeWidth="2"
 									initial={{ pathLength: 0 }}
 									animate={{ pathLength: 1 }}
-									transition={{ duration: 2 }}
+									transition={{ duration: 1 }}
 								/>
 							</g>
 						</svg>
