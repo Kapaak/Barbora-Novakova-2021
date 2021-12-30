@@ -127,7 +127,8 @@ const Wrapper = styled.div`
 	@media ${breakpoints.desktopX} {
 		svg,
 		img {
-			height: 17.4rem;
+			height: 15.6rem;
+			min-width: 10.5rem;
 		}
 	}
 `;
