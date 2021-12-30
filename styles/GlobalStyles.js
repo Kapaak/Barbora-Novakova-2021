@@ -76,7 +76,7 @@ export const GlobalStyles = createGlobalStyle`
             --bt: calc(2.3rem / var(--divider));
             --h: calc(3.3rem / var(--divider));
 
-            --gap:6rem;
+            --gap:3rem;
             --side-p:14rem;
             --top-p:10rem;
         }

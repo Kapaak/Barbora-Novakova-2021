@@ -15,7 +15,7 @@ const Navigation = () => {
 
 	return (
 		<StyledNavigation active={active}>
-			<NavBurger handleActive={handleActive} />
+			<NavBurger handleActive={handleActive} isActive={active} />
 			<NavItems handleActive={handleActive} isActive={active} />
 			<StyledFillerEffect
 				active={active ? "scale(80)" : "scale(0)"}
@@ -35,7 +35,7 @@ const StyledFillerEffect = styled(FillerEffect)`
 const StyledNavigation = styled.div`
 	position: fixed;
 	right: 0;
-	width: 50%;
+	width: 100%;
 	padding: 2rem;
 	height: 100vh;
 	overflow: hidden;

@@ -7,6 +7,8 @@ import { breakpoints, HeroHeadline } from "../../styles";
 import { HeroSubheadline } from "../../styles";
 import { Line } from "../../styles";
 
+import { motion } from "framer-motion";
+
 const HeroPage = () => {
 	const wrapperRef = useRef(null);
 	const fullSizeRef = useRef(null);
@@ -30,7 +32,26 @@ const HeroPage = () => {
 			<StyledHeroPage>
 				<div>
 					<Wrapper ref={wrapperRef}>
-						<img src="assets/house.svg" alt="house" />
+						{/* <img src="assets/house.svg" alt="house" /> */}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="65.89"
+							height="59.929"
+							viewBox="0 0 65.89 59.929"
+						>
+							<g transform="translate(-34.37 -322.704)">
+								<motion.path
+									d="M-5679.487,13721.527l32.7-26.5,31.56,26.5v32.129"
+									transform="translate(5714.487 -13371.023)"
+									fill="none"
+									stroke="#8d0801"
+									strokeWidth="2"
+									initial={{ pathLength: 0 }}
+									animate={{ pathLength: 1 }}
+									transition={{ duration: 2 }}
+								/>
+							</g>
+						</svg>
 						<div>
 							<HeroHeadline>Barbora Nováková</HeroHeadline>
 							<Line correctWidth={correctWidth} />
@@ -63,8 +84,12 @@ const Wrapper = styled.div`
 	width: 100%;
 	align-items: flex-start;
 
-	img {
-		height: 7.845rem;
+	img,
+	svg {
+		/* min-width: 10rem;
+		height: 10.48rem; */
+		min-width: 8.5rem;
+		height: 7.78rem;
 		/* height: 9.665rem; */
 		flex: 1;
 	}
@@ -74,17 +99,17 @@ const Wrapper = styled.div`
 	}
 
 	@media ${breakpoints.mobileM} {
+		svg,
 		img {
-			height: 8.6rem;
-			width: 100%;
+			height: 9.62rem;
 		}
 	}
 
-	@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 564px) {
+	/* @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 564px) {
 		img {
 			height: 9.665rem;
 		}
-	}
+	} */
 
 	@media ${breakpoints.mobileX} {
 		& > div {
@@ -93,14 +118,16 @@ const Wrapper = styled.div`
 	}
 
 	@media ${breakpoints.desktopS} {
+		svg,
 		img {
-			height: 9.8rem;
+			height: 11.8rem;
 		}
 	}
 
 	@media ${breakpoints.desktopX} {
+		svg,
 		img {
-			height: 12.6rem;
+			height: 17.4rem;
 		}
 	}
 `;

@@ -21,9 +21,11 @@ const StyledNavItems = styled.div`
 	display: ${({ isActive }) => (isActive ? "flex" : "none")};
 	position: relative;
 	flex-direction: column;
-	margin-top: 6rem;
+	/* margin-top: 6rem; */
+	margin-top: 50%;
+	margin-left: 18%;
 	text-align: right;
-	gap: var(--gap);
+	gap: 3rem;
 	color: var(--col2);
 	z-index: 999;
 
@@ -37,7 +39,6 @@ const StyledNavItems = styled.div`
 	@media ${breakpoints.desktopS} {
 		display: flex;
 		margin-top: 0;
-		gap: 3rem;
 
 		p {
 			position: relative;

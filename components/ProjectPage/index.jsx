@@ -4,7 +4,7 @@ import Image from "next/image";
 import ReactBnbGallery from "react-bnb-gallery";
 import "react-bnb-gallery/dist/style.css";
 //components
-import { FillerEffect, Headline, Section } from "../../styles";
+import { breakpoints, FillerEffect, Headline, Section } from "../../styles";
 import { urlFor } from "../../utils/imageBuilder";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -85,8 +85,7 @@ const GalleryItem = styled.div`
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
-	height: 35rem;
-	width: 35rem;
+	height: 25rem;
 
 	& > div {
 		position: absolute;
@@ -103,15 +102,30 @@ const GalleryItem = styled.div`
 	&:hover ${ImageDescription} {
 		opacity: 1;
 	}
+
+	@media ${breakpoints.desktopS} {
+		height: 30rem;
+	}
+	@media ${breakpoints.desktopX} {
+		height: 33rem;
+	}
 `;
 
 const Gallery = styled.div`
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
 	gap: var(--gap);
+
 	img {
 		width: 100%;
 		object-fit: cover;
+	}
+
+	@media ${breakpoints.mobileM} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media ${breakpoints.tabletS} {
+		grid-template-columns: repeat(3, 1fr);
 	}
 `;
 
