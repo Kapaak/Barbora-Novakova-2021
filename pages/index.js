@@ -33,6 +33,6 @@ export const getStaticProps = async pageContext => {
 	else
 		return {
 			props: { detail, projects },
-			revalidate: 60,
+			revalidate: 10,
 		};
 };
