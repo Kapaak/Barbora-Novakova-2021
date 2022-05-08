@@ -42,7 +42,11 @@ const ProjectPage = ({ projectData }) => {
 						<GalleryItem key={i} onClick={() => targetActiveImage(i)}>
 							<FillerEffect />
 							{p.image[0] && (
-								<Image src={urlFor(p.image[0]).url()} layout="fill" />
+								<Image
+									src={urlFor(p.image[0]).url()}
+									layout="fill"
+									alt={p.headline}
+								/>
 							)}
 							<ImageDescription>
 								<h2>{p.headline}</h2>

@@ -6,7 +6,7 @@ export const Headline = ({ children }) => {
 	return <StyledHeadline>{children}</StyledHeadline>;
 };
 
-const StyledHeadline = styled.h1`
+const StyledHeadline = styled.h2`
 	max-width: var(--max-width);
 	margin-bottom: 2rem;
 	font-family: var(--font2);
