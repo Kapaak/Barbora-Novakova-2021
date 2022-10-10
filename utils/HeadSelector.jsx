@@ -11,6 +11,10 @@ const HeadSelector = () => {
 				name="description"
 				content="Ahoj, jmenuji se Barbora Nováková a toto je mé portfolio. Jsem studentkou architektury a baví mě nejvíce veřejný prostor, urbanismus, obnova a rekonstrukce památek. Dále se zajímám o grafický design a webový design."
 			/>
+			<meta
+				name="google-site-verification"
+				content="l9sx8TIg--Partzz-3vfD2IVjTGz1mHzJH9hihW5DFQ"
+			/>
 			<link rel="preconnect" href="https://fonts.googleapis.com" />
 			<link
 				rel="preconnect"
