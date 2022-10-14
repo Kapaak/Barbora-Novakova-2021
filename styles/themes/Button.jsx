@@ -1,50 +1,51 @@
 //libs
-import styled from "styled-components";
-import { breakpoints } from "..";
-import { FillerEffect } from "./FillerEffect";
+import styled from 'styled-components'
+import { breakpoints } from '..'
+import { FillerEffect } from './FillerEffect'
 
 export const Button = ({ children }) => {
-	return (
-		<StyledButton>
-			<FillerEffect />
-			{children}
-		</StyledButton>
-	);
-};
+  return (
+    <StyledButton>
+      <FillerEffect />
+      {children}
+    </StyledButton>
+  )
+}
 
 const StyledButton = styled.button`
-	position: relative;
-	border: 2px solid var(--col3);
-	text-transform: uppercase;
-	font-size: var(--t);
-	font-weight: bold;
-	transition: all 0.5s ease-in-out;
-	overflow: hidden;
+  position: relative;
+  border: 2px solid var(--col3);
+  text-transform: uppercase;
+  font-size: var(--t);
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  background-color: transparent;
 
-	a {
-		position: relative;
-		display: inline-block;
-		color: var(--col1);
-		text-decoration: none;
-		padding: 0.8rem 1.4rem;
-		font-weight: 500;
-		z-index: 2;
-	}
+  a {
+    position: relative;
+    display: inline-block;
+    color: var(--col1);
+    text-decoration: none;
+    padding: 0.8rem 1.4rem;
+    font-weight: 500;
+    z-index: 2;
+  }
 
-	&:hover {
-		a {
-			color: var(--col2);
-		}
-	}
+  &:hover {
+    a {
+      color: var(--col2);
+    }
+  }
 
-	&:hover ${FillerEffect} {
-		transform: scale(8);
-		opacity: 0.96;
-	}
+  &:hover ${FillerEffect} {
+    transform: scale(8);
+    opacity: 0.96;
+  }
 
-	@media ${breakpoints.desktopS} {
-		a {
-			padding: 1.1rem 3rem;
-		}
-	}
-`;
+  @media ${breakpoints.desktopS} {
+    a {
+      padding: 1.1rem 3rem;
+    }
+  }
+`

@@ -1,6 +1,6 @@
 //libraries
-import { createGlobalStyle } from "styled-components";
-import { breakpoints } from ".";
+import { createGlobalStyle } from 'styled-components'
+import { breakpoints } from '.'
 
 export const GlobalStyles = createGlobalStyle`
     *,*::before,*::after{
@@ -91,4 +91,4 @@ export const GlobalStyles = createGlobalStyle`
             --bt: calc(2.5rem / var(--divider));
        }
     }
-`;
+`
