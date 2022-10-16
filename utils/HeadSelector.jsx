@@ -6,6 +6,7 @@ const HeadSelector = () => {
     <Head>
       <title>Barbora Novakova | portfolio</title>
       <meta name="author" content="Barbora Novakova" />
+      <link rel="canonical" href="https://barboranovakova.cz/" />
       <meta
         name="keywords"
         content="Barbora Novakova, portfolio, architecture, achitektura"

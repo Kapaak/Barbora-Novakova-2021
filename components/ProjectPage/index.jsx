@@ -50,8 +50,12 @@ const ProjectPage = ({ projectData }) => {
                 />
               )}
               <ImageDescription>
-                <h2>{p.headline}</h2>
-                <h1>{p.subheadline}</h1>
+                <ImageDescriptionHeadline>
+                  {p.headline}
+                </ImageDescriptionHeadline>
+                <ImageDescriptionSubheadline>
+                  {p.subheadline}
+                </ImageDescriptionSubheadline>
               </ImageDescription>
             </GalleryItem>
           )
@@ -69,21 +73,23 @@ const ProjectPage = ({ projectData }) => {
   )
 }
 
+const ImageDescriptionHeadline = styled.h3`
+  font-weight: 500;
+  color: var(--col4);
+  font-size: var(--t);
+  margin-bottom: 1rem;
+`
+
+const ImageDescriptionSubheadline = styled.h3`
+  font-family: var(--font2);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: var(--bt);
+`
+
 const ImageDescription = styled.div`
   opacity: 0;
   z-index: 3;
-  h2 {
-    font-weight: 500;
-    color: var(--col4);
-    font-size: var(--t);
-    margin-bottom: 1rem;
-  }
-  h1 {
-    font-family: var(--font2);
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: var(--bt);
-  }
 `
 
 const GalleryItem = styled.div`

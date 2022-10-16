@@ -6,7 +6,7 @@ export const HeroSubheadline = ({ children }) => {
   return <SHeroSubheadline>{children}</SHeroSubheadline>
 }
 
-const SHeroSubheadline = styled.h1`
+const SHeroSubheadline = styled.h2`
   font-family: var(--font1);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
