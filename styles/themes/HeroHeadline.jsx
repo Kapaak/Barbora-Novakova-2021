@@ -7,10 +7,9 @@ export const HeroHeadline = ({ children }) => {
 }
 
 const SHeroHeadline = styled.h1`
-  font-family: var(--font2);
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   font-size: var(--mh);
   margin-left: 1rem;
   line-height: 1.25;

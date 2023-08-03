@@ -6,7 +6,6 @@ import { FillerEffect } from './FillerEffect'
 export const Button = ({ children }) => {
   return (
     <StyledButton>
-      <FillerEffect />
       {children}
     </StyledButton>
   )
@@ -15,19 +14,21 @@ export const Button = ({ children }) => {
 const StyledButton = styled.button`
   position: relative;
   border: 2px solid var(--col3);
+  box-shadow: 0px 0px 5px 0px rgba(195, 86, 45, 0.50);
+  border-radius: .5rem;
   text-transform: uppercase;
-  font-size: var(--t);
-  font-weight: bold;
-  transition: all 0.5s ease-in-out;
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
   overflow: hidden;
   background-color: transparent;
-
+  
   a {
     position: relative;
+    transition: all 0.3s ease-in-out;
     display: inline-block;
-    color: var(--col1);
+    color: var(--col-b);
+    letter-spacing: .1rem;
     text-decoration: none;
-    padding: 0.8rem 1.4rem;
     font-weight: 500;
     z-index: 2;
   }
@@ -35,6 +36,7 @@ const StyledButton = styled.button`
   &:hover {
     a {
       color: var(--col2);
+      background-color: var(--col3);
     }
   }
 
@@ -45,7 +47,7 @@ const StyledButton = styled.button`
 
   @media ${breakpoints.desktopS} {
     a {
-      padding: 1.1rem 3rem;
+      padding: 1.4rem 2rem;
     }
   }
 `

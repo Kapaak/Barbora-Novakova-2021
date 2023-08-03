@@ -15,7 +15,6 @@ export const Section = ({ colored, children, scrollName }) => {
 const StyledSection = styled.section`
   position: relative;
   padding: var(--top-p) var(--side-p);
-  background-color: ${({ colored }) => colored && 'var(--col4)'};
 
   & > div {
     max-width: var(--max-width);

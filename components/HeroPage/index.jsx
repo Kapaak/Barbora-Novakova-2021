@@ -43,7 +43,7 @@ const HeroPage = () => {
                   d="M-5679.487,13721.527l32.7-26.5,31.56,26.5v32.129"
                   transform="translate(5714.487 -13371.023)"
                   fill="none"
-                  stroke="#8d0801"
+                  stroke="var(--col3)"
                   strokeWidth="2"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
@@ -52,9 +52,9 @@ const HeroPage = () => {
               </g>
             </svg>
             <div>
-              <HeroHeadline>Barbora Nováková</HeroHeadline>
+              <HeroSubheadline>Ing.Arch</HeroSubheadline>
               <Line correctWidth={correctWidth} />
-              <HeroSubheadline>Studentka architektury</HeroSubheadline>
+              <HeroHeadline>Barbora Nováková</HeroHeadline>
             </div>
           </Wrapper>
         </div>
@@ -85,11 +85,8 @@ const Wrapper = styled.div`
 
   img,
   svg {
-    /* min-width: 10rem;
-		height: 10.48rem; */
-    min-width: 8.5rem;
-    height: 7.78rem;
-    /* height: 9.665rem; */
+    height: 7.35rem;
+    min-width: 8.1rem;
     flex: 1;
   }
 
@@ -100,7 +97,8 @@ const Wrapper = styled.div`
   @media ${breakpoints.mobileM} {
     svg,
     img {
-      height: 9.62rem;
+      height: 7.14rem;
+      min-width: 7.6rem;
     }
   }
 
@@ -119,14 +117,15 @@ const Wrapper = styled.div`
   @media ${breakpoints.desktopS} {
     svg,
     img {
-      height: 11.8rem;
+      height: 7.5rem;
+      min-width: 8.3rem;
     }
   }
 
   @media ${breakpoints.desktopX} {
     svg,
     img {
-      height: 15.6rem;
+      height: 10.6rem;
       min-width: 10.5rem;
     }
   }

@@ -28,7 +28,7 @@ const AboutPage = ({ aboutData }) => {
               target="_blank"
               href={aboutData.file.url}
             >
-              životopis
+              životopis v pdf
             </a>
           </Button>
         </TextWrapper>

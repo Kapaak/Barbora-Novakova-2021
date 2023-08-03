@@ -33,7 +33,6 @@ const StyledNavItems = styled.div`
     cursor: pointer;
     font-size: var(--mh);
     text-align: left;
-    font-family: var(--font2);
   }
 
   @media ${breakpoints.desktopS} {
@@ -43,7 +42,7 @@ const StyledNavItems = styled.div`
     p {
       position: relative;
       font-size: var(--smh);
-      color: var(--col2);
+      color: var(--col-bg);
       padding: 1rem 0;
 
       &::before {

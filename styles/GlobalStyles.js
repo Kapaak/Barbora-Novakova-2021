@@ -10,14 +10,20 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     :root{
-        --font1:"Roboto", sans-serif;
-        --font2:"Righteous", cursive;
-
-        --col1:#001427;
-        --col2: #F8F8F8;
-        --col3:#8D0801;
+        --font1:"Barlow", sans-serif;
+        
+        --col1:#185E64;
+        --col2: #F8F8F8;//mb remove
+        --col3:#C3562D;
         --col4:#EBEBEB;
         --col5:#D6D6D6;
+        --col-bg:#F6F4F0;
+        --col-b:#020202;
+
+        --fw-light:300;
+        --fw-regular:400;
+        --fw-medium:500;
+        --fw-bold:600;
 
         --max-width:120rem;
         --side-p:2rem;
@@ -43,6 +49,7 @@ export const GlobalStyles = createGlobalStyle`
         font-family:var(--font1);
         font-size: 1.6rem;
         color: var(--col1);
+        background-color: var(--col-bg);
     }
 
     //removing border-radius from gallery image

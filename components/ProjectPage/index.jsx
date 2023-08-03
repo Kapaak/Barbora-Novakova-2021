@@ -40,7 +40,6 @@ const ProjectPage = ({ projectData }) => {
         {projectData?.map((p, i) => {
           return (
             <GalleryItem key={i} onClick={() => targetActiveImage(i)}>
-              <FillerEffect />
               {p.image[0] && (
                 <Image
                   loading="lazy"
@@ -49,14 +48,14 @@ const ProjectPage = ({ projectData }) => {
                   alt={p.headline}
                 />
               )}
-              <ImageDescription>
+              {/* <ImageDescription>
                 <ImageDescriptionHeadline>
                   {p.headline}
                 </ImageDescriptionHeadline>
                 <ImageDescriptionSubheadline>
                   {p.subheadline}
                 </ImageDescriptionSubheadline>
-              </ImageDescription>
+              </ImageDescription> */}
             </GalleryItem>
           )
         })}
@@ -81,7 +80,6 @@ const ImageDescriptionHeadline = styled.h3`
 `
 
 const ImageDescriptionSubheadline = styled.h3`
-  font-family: var(--font2);
   font-weight: 500;
   text-transform: uppercase;
   font-size: var(--bt);
@@ -97,6 +95,7 @@ const GalleryItem = styled.div`
   cursor: pointer;
   overflow: hidden;
   height: 25rem;
+  border-radius: 1rem;
 
   & > div {
     position: absolute;
