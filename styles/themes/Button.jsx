@@ -31,6 +31,7 @@ const StyledButton = styled.button`
     text-decoration: none;
     font-weight: 500;
     z-index: 2;
+    padding: 1rem 1.5rem;
   }
 
   &:hover {
