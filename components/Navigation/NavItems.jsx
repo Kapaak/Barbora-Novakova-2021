@@ -31,7 +31,7 @@ const StyledNavItems = styled.div`
 
   p {
     cursor: pointer;
-    font-size: var(--mh);
+    font-size: var(--mh)  ;
     text-align: left;
   }
 
@@ -42,8 +42,10 @@ const StyledNavItems = styled.div`
     p {
       position: relative;
       font-size: var(--smh);
-      color: var(--col-bg);
+      color: var(--col1);
       padding: 1rem 0;
+      text-align: right;
+    padding-right: 6rem;
 
       &::before {
         content: '';

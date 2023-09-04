@@ -1,70 +1,61 @@
 //libs
+import { useState,useEffect } from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import ReactBnbGallery from 'react-bnb-gallery'
 import 'react-bnb-gallery/dist/style.css'
 //components
-import { breakpoints, FillerEffect, Headline, Section } from '../../styles'
+import { breakpoints, Headline, Section } from '../../styles'
 import { urlFor } from '../../utils/imageBuilder'
-import { useState } from 'react'
-import { useEffect } from 'react'
 
-const ProjectPage = ({ projectData }) => {
-  const [active, setActive] = useState(false)
+const ProjectPage = ({ projects }) => {
+  const [isOpen, setIsOpen] = useState(false)
   const [gallery, setGallery] = useState([])
-  const [targetedImage, setTargetedImage] = useState(0)
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
 
-  const targetActiveImage = (index) => {
-    setTargetedImage(index)
-    setActive(true)
+  const selectImageIndex = (index) => {
+    setSelectedImageIndex(index)
+    setIsOpen(true)
   }
 
   useEffect(() => {
-    projectData.map((p, i) => {
-      const photoArray = []
-      p.image?.map((image) => {
-        photoArray.push(urlFor(image).url())
+    projects.map((project) => {
+      const imageURLs = project.image?.map((image) => {
+        return urlFor(image).url()
       })
 
       setGallery((prev) => [
         ...prev,
-        { projectName: p.subheadline, imageURLs: photoArray },
+        { projectName: project.subheadline, imageURLs },
       ])
     })
-  }, [])
+  }, [projects])
 
   return (
     <Section colored scrollName="projects">
       <Headline>Portfolio</Headline>
       <Gallery>
-        {projectData?.map((p, i) => {
+        {projects?.map((project, index) => {
           return (
-            <GalleryItem key={i} onClick={() => targetActiveImage(i)}>
-              {p.image[0] && (
+            <GalleryItem key={index} onClick={() => selectImageIndex(index)}>
+              {project?.thumbnail && (
                 <Image
                   loading="lazy"
-                  src={urlFor(p.image[0]).url()}
+                  src={urlFor(project?.thumbnail)?.url()}
+                  blurDataURL={urlFor(project?.thumbnail)?.url()}
                   layout="fill"
-                  alt={p.headline}
+                  alt={project?.headline}
                 />
               )}
-              {/* <ImageDescription>
-                <ImageDescriptionHeadline>
-                  {p.headline}
-                </ImageDescriptionHeadline>
-                <ImageDescriptionSubheadline>
-                  {p.subheadline}
-                </ImageDescriptionSubheadline>
-              </ImageDescription> */}
             </GalleryItem>
           )
         })}
       </Gallery>
-      {active && (
+      {isOpen && (
         <ReactBnbGallery
-          photos={gallery[targetedImage].imageURLs}
-          show={active}
-          onClose={() => setActive(false)}
+          photos={gallery[selectedImageIndex].imageURLs}
+          show={isOpen}
+          onClose={() => setIsOpen(false)}
           showThumbnails={false}
         />
       )}
@@ -72,23 +63,6 @@ const ProjectPage = ({ projectData }) => {
   )
 }
 
-const ImageDescriptionHeadline = styled.h3`
-  font-weight: 500;
-  color: var(--col4);
-  font-size: var(--t);
-  margin-bottom: 1rem;
-`
-
-const ImageDescriptionSubheadline = styled.h3`
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: var(--bt);
-`
-
-const ImageDescription = styled.div`
-  opacity: 0;
-  z-index: 3;
-`
 
 const GalleryItem = styled.div`
   position: relative;
@@ -96,6 +70,7 @@ const GalleryItem = styled.div`
   overflow: hidden;
   height: 25rem;
   border-radius: 1rem;
+  transition: all .1s ease-in-out;
 
   & > div {
     position: absolute;
@@ -104,13 +79,9 @@ const GalleryItem = styled.div`
     color: var(--col2);
   }
 
-  &:hover ${FillerEffect} {
-    transform: scale(30);
-    opacity: 0.9;
-  }
-
-  &:hover ${ImageDescription} {
-    opacity: 1;
+  &:hover  {
+    scale: 1.05;
+    transition: all .3s ease-in-out;
   }
 
   @media ${breakpoints.desktopS} {

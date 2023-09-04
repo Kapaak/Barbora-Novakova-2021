@@ -52,7 +52,7 @@ const HeroPage = () => {
               </g>
             </svg>
             <div>
-              <HeroSubheadline>Ing.Arch</HeroSubheadline>
+              <HeroSubheadline>Ing. Arch.</HeroSubheadline>
               <Line correctWidth={correctWidth} />
               <HeroHeadline>Barbora Nováková</HeroHeadline>
             </div>

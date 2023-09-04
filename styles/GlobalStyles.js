@@ -42,14 +42,13 @@ export const GlobalStyles = createGlobalStyle`
 
     html{
         font-size: 62.5%;
-        background-color: var(--col2);
+        background-image: url("/assets/pattern.png");
     }
 
     body{
         font-family:var(--font1);
         font-size: 1.6rem;
         color: var(--col1);
-        background-color: var(--col-bg);
     }
 
     //removing border-radius from gallery image

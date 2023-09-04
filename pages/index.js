@@ -16,13 +16,13 @@ export default function Home({ detail, projects }) {
         educationData={educationSection}
         experienceData={experienceSection}
       />
-      <ProjectPage projectData={projects} />
+      <ProjectPage projects={projects} />
       <ContactPage />
     </>
   )
 }
 
-export const getStaticProps = async (pageContext) => {
+export const getStaticProps = async () => {
   const query = `*[ _type == "detail"][0]{aboutSection{"file":file.asset->{url},photo,text},educationSection[]{study,location,date},experienceSection[]{company,date,job}}`
   const query2 = `*[_type == "project"]`
 
